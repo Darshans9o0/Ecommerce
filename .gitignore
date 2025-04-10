@@ -38,3 +38,9 @@ src/photos/*
 
 # But keep the folder
 !src/photos/.gitkeep
+
+# images
+*/src/assets/*.png
+*/src/assets/*.jpg
+*/src/assets/*.jpeg
+
