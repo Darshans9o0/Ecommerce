@@ -13,11 +13,8 @@ const RelatedProducts = ({category , subCategory}) => {
             productsCopy = productsCopy.filter((item) => category === item.category)
             productsCopy = productsCopy.filter((item) => subCategory=== item.Subcategory)
 
-            setRelated(productsCopy.slice(0,5))
-            
-        }
-        
-       
+            setRelated(productsCopy.slice(0,5))  
+        }       
     }, []);
   return (
     <div className='my-24'>

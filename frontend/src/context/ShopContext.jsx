@@ -9,7 +9,27 @@ import { products } from "../assets/assets";
     const delivery_fee = 10;
     const [search , setSearch] = useState('')
     const [showSearch , setShowsearch] = useState(false)
+    const [cartItem  , setCartItem] = useState({})
 
+
+    const addToCart = async(itemId , size) =>{
+        let cartData = structuredClone(cartItem)
+
+        if (cartData[itemId]) {
+            if (cartData[itemId][size]) {
+                cartData[itemId][size] += 1;
+            }
+            else {
+                cartData[itemId] [size] = 1;
+            }
+            
+        }
+        else {
+            cartData[itemId] = {}
+            cartData[itemId][size] = 1;
+        }
+
+    }
 
 
     const value = {
